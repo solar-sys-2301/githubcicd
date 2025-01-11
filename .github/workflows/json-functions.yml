@@ -4,7 +4,9 @@ jobs:
   dump:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${CONTEXT}"
+      - run: |
+         echo "${CONTEXT}"
+         echo "${RUNNER}"
         env:
           CONTEXT: ${{ toJSON(github) }} # githubコンテキストをJSON文字列でダンプ
           RUNNER: ${{ toJSON(runner) }}
