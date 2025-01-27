@@ -7,4 +7,3 @@ var version string // ビルド時にldflagsフラグ経由でバージョンを
 func main() {
 	fmt.Printf("Example %s\n", version)
 }
-
